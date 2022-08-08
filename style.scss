@@ -1,0 +1,97 @@
+$darkCyan:hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$darkBlue:hsl(212, 21%, 14%);
+$darkGrayishBlue:hsl(228, 12%, 48%);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+.price {
+    font-family: 'Fraunces', serif;
+}
+
+body {
+    display: flex;
+    background-color: $Cream;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    main {
+        max-width: 800px;
+        min-width: 300px;
+        background-color: white;
+        width: 95%;
+        margin: 15px auto;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        border-radius: 30px;
+        img {
+            // max-height: 800px;
+            max-width: 400px;
+        }
+        .text {
+            max-width: 400px;
+            padding: 35px;
+            &>span {
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: $darkGrayishBlue;
+            }
+            p {
+                color: $darkGrayishBlue;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            h1 {
+                font-size: 50px;
+                margin: 30px 0;
+                line-height: 1;
+            }
+            .price {
+                display: flex;
+                align-items: center;
+                margin: 30px 0;
+                // justify-content: space-between;
+                sup {
+                    // background-color: darkblue;
+                    // color: wheat;
+                    text-decoration: line-through;
+                    margin-left: 30px;
+                    font-size: 18px;
+                    transform: translateY(-10px);
+                }
+                span {
+                    // background-color: darkblue;
+                    &:first-of-type {
+                        color: $darkCyan;
+                        font-size: 50px;
+                        font-family: 'Fraunces', serif;
+                    }
+                }
+            }
+            button {
+                width: 100%;
+                background-color: $darkCyan;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                border: none;
+                font-weight: bold;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
